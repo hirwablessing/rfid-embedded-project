@@ -10,6 +10,7 @@ export default new Endpoint(
     const cardOwner = request.body["owner"];
     const destination = request.body["destination"];
     const cardUUid = request.body["uuid"];
+    const transportFare = request.body["transportFare"];
     const initialBalance = request.body["initialBalance"];
     const newBalance = request.body["newBalance"];
 
@@ -20,9 +21,10 @@ export default new Endpoint(
       const entryObject = {
         card_owner: cardOwner,
         destination: destination,
-        cardUUid: cardUUid,
+        card_uuid: cardUUid,
+        transport_fare: transportFare,
         initial_balance: initialBalance,
-        newBalance,
+        new_balance: newBalance,
       };
 
       entry.set(entryObject);
